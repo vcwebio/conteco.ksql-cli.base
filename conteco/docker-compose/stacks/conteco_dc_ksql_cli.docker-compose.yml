@@ -2,9 +2,9 @@
 version: '3'
 services:
 
-# START SERVICE ksql-cli.base
-  ksql-cli:
-    image: ${CONTECO_REGISTRY}${CONTECO_REALM_RUNTIME}/conteco.ksql-cli.base:5.4.0
+# START SERVICE ksql_cli.base
+  ksql_cli:
+    image: ${CONTECO_REGISTRY}${CONTECO_REALM_RUNTIME}/conteco.ksql_cli.base:5.4.0
     environment: []
     command: []
     volumes: []
@@ -20,7 +20,7 @@ services:
           cpus: '${CONTECO_DC_KSQL_CLI_DEPLOY_RESOURCES_RESERVATIONS_CPUS}'
           memory: '${CONTECO_DC_KSQL_CLI_DEPLOY_RESOURCES_RESERVATIONS_MEMORY}'
       labels: [${CONTECO_DC_KSQL_CLI_DEPLOY_LABELS}]
-# END SERVICE ksql-cli.base
+# END SERVICE ksql_cli.base
 
 volumes: {}
 networks: {${CONTECO_NETWORKLOCAL}_overlay: { external: true }}
