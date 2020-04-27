@@ -15,7 +15,8 @@ COPY ./ /conteco/repo/
 ##### END image/Dockerfile/conteco #####
 
 ##### BEGIN image/Dockerfile/build-instructions #####
-ENV CONTECO_ENTRYPOINT "ksql"
+ENV CONTECO_ENTRYPOINT="ksql" \
+    CONTECO_PREENTRYPOINT="/conteco/bin/ksql_cli/internal/entrypoint"
 ##### END image/Dockerfile/build-instructions #####
 
 ##### BEGIN image.base/Dockerfile/env-labels-footer #####
